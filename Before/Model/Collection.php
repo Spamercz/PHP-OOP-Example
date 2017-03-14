@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace Before\Model;
 
 
 class Collection
@@ -20,7 +20,7 @@ class Collection
 	public function getData()
 	{
 		foreach ($this->metadata as $item) {
-			yield new \App\Model\Entity\Person($item);
+			yield new \Before\Model\Entity\Person($item);
 		}
 	}
 }

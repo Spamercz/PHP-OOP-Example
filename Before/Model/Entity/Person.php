@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Model\Entity;
+namespace Before\Model\Entity;
 
 
-class Person extends \App\Model\Entity
+class Person extends \Before\Model\Entity
 {
 	/**
 	 * @var array

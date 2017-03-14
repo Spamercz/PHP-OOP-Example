@@ -1,4 +1,4 @@
-## Old
+## Before
 1. Get Data
 ```php
 $data = $this->elastic->get('3315342');
@@ -6,7 +6,7 @@ $data = $this->elastic->get('3315342');
 
 2. Map Data
 ```php
-$title = new \App\Model\Entity\Title($data);
+$title = new \Before\Model\Entity\Title($data);
 ```
 
 3. Edit entity
@@ -36,5 +36,5 @@ foreach ($title->getPeople()->getData() as $person) {
 $this->elastic->save($entity->toArray());
 ```
 
-## New
+## After
 

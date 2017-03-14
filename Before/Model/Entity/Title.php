@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Model\Entity;
+namespace Before\Model\Entity;
 
 
-class Title extends \App\Model\Entity
+class Title extends \Before\Model\Entity
 {
 	/**
 	 * @var array
@@ -31,7 +31,7 @@ class Title extends \App\Model\Entity
 	private $description;
 
 	/**
-	 * @var \App\Model\Collection
+	 * @var \Before\Model\Collection
 	 */
 	private $people;
 
@@ -127,11 +127,11 @@ class Title extends \App\Model\Entity
 	}
 
 	/**
-	 * @return \App\Model\Collection
+	 * @return \Before\Model\Collection
 	 */
 	public function getPeople()
 	{
-		return new \App\Model\Collection($this->metadata['people']);
+		return new \Before\Model\Collection($this->metadata['people']);
 	}
 
 	/**
