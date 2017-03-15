@@ -17,20 +17,41 @@ class Title implements IEntity
 	private $name;
 
 	/**
-	 * @var int
+	 * @var Year
 	 */
 	private $year;
+
+	/**
+	 * @var \After\Model\Entity\Title\Description
+	 */
+	private $description;
+
+	/**
+	 * @var \After\Model\Entity\Ids
+	 */
+	private $ids;
+
+	/**
+	 * @var \After\Model\Collection\People
+	 */
+	private $people;
 
 
 	public function __construct(
 		\After\Model\Entity\Title\Id $id
 		, \After\Model\Entity\Title\Name $name
+		, \After\Model\Entity\Title\Description $description
 		, Year $year
+		, Ids $idCollection
+		, \After\Model\Collection\People $people
 	)
 	{
 		$this->year = $year;
 		$this->name = $name;
 		$this->id = $id;
+		$this->description = $description;
+		$this->ids = $idCollection;
+		$this->people = $people;
 	}
 
 
@@ -61,5 +82,23 @@ class Title implements IEntity
 	public function id() : \After\Model\Entity\Title\Id
 	{
 		return $this->id;
+	}
+
+
+	public function description() : \After\Model\Entity\Title\Description
+	{
+		return $this->description;
+	}
+
+
+	public function ids() : Ids
+	{
+		return $this->ids;
+	}
+
+
+	public function people() : \After\Model\Collection\People
+	{
+		return $this->people;
 	}
 }

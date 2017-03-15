@@ -1,6 +1,6 @@
 <?php
 
-namespace After\Model;
+namespace After\Model\Extract;
 
 
 class StringValue
