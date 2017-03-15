@@ -15,10 +15,10 @@ class Name implements \After\Model\Entity\IValue
 		\After\Model\Entity\StringType $string
 	)
 	{
-		if (strlen($string->value()) > 255) {
+		if ($string->length() > 255) {
 			throw new \After\Model\Exception\OutOfRange();
 		}
-		if (strlen($string->value()) < 2) {
+		if ($string->length() < 2) {
 			throw new \After\Model\Exception\OutOfRange();
 		}
 

@@ -24,6 +24,12 @@ class StringType implements IValue
 	}
 
 
+	public function length() : int
+	{
+		return strlen($this->value);
+	}
+
+
 	public function __toString() : string
 	{
 		return $this->value;

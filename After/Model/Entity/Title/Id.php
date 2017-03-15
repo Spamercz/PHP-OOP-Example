@@ -15,7 +15,7 @@ class Id implements \After\Model\Entity\IValue
 		\After\Model\Entity\StringType $string
 	)
 	{
-		if (strlen($string->value()) !== 8) {
+		if ($string->length() !== 8) {
 			throw new \After\Model\Exception\OutOfRange();
 		}
 

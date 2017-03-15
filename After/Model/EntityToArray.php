@@ -6,13 +6,13 @@ class EntityToArray
 {
 
 	/**
-	 * @var \After\Model\ValueToArray
+	 * @var ExtractValue
 	 */
 	private $valueToArray;
 
 
 	public function __construct(
-		ValueToArray $valueToArray
+		ExtractValue $valueToArray
 	)
 	{
 		$this->valueToArray = $valueToArray;
@@ -25,7 +25,7 @@ class EntityToArray
 
 		foreach ($entity->entityVariables() as $name => $value) {
 			if ($value instanceof \After\Model\Entity\IValue) {
-				$array[$name] = $this->valueToArray->decorate($value);
+				$array[$name] = $this->valueToArray->extract($value);
 
 			} elseif ($value instanceof \After\Model\Entity\IEntity) {
 				$array[$name] = $this->decorate($value->entityVariables());
